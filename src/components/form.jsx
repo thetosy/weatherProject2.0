@@ -7,7 +7,7 @@ import axios from "axios";
 
 const urlParams = "&units=imperial&appid=";
 const ID = process.env.REACT_APP_ID;
-const params = urlParams+ID;
+const params = urlParams + ID;
 
 // axios.defaults.baseURL = 'https://api.openweathermap.org/data/2.5/weather?q=';
 
@@ -20,17 +20,17 @@ const params = urlParams+ID;
 //     );
 // }
 
-function Form(){
+function Form() {
 
-    const[name, setCityName] = useState();
-    const[humidity, setHumidity] = useState();
-    const[weatherDescription, setWeatherDescription] = useState();
-    const[temperature, setWeatherTemp] = useState();
+    const [name, setCityName] = useState();
+    const [humidity, setHumidity] = useState();
+    const [weatherDescription, setWeatherDescription] = useState();
+    const [temperature, setWeatherTemp] = useState();
     const [userValue, setValue] = useState();
 
     useEffect(() => {
-        axios.get("https://api.openweathermap.org/data/2.5/weather",{
-            params:{
+        axios.get("https://api.openweathermap.org/data/2.5/weather", {
+            params: {
                 q: "lagos",
                 units: "imperial",
                 appid: ID
@@ -43,7 +43,7 @@ function Form(){
             const formatHumidity = response.data.main.humidity + "%";
             setHumidity(formatHumidity);
         })
-    },[]);
+    }, []);
 
 
 
@@ -52,9 +52,9 @@ function Form(){
     //     console.log(value);
     // }
 
-    function handleSubmit(e){
-        axios.get("https://api.openweathermap.org/data/2.5/weather",{
-            params:{
+    function handleSubmit(e) {
+        axios.get("https://api.openweathermap.org/data/2.5/weather", {
+            params: {
                 q: userValue,
                 units: "imperial",
                 appid: ID
@@ -83,35 +83,35 @@ function Form(){
         <div className="container overflow-hidden weather">
             <div className="row">
                 <Information
-                    cityName= {name}
-                    humidity= {humidity}
-                    description= {weatherDescription}
-                    temp= {temperature}
+                    cityName={name}
+                    humidity={humidity}
+                    description={weatherDescription}
+                    temp={temperature}
                 />
                 <div id="box" className="col-6 weather-search">
                     <div className="container">
                         <form className="search-form" onSubmit={handleSubmit}>
                             <div className="row">
                                 <div className="col-10 frm-dsn wef">
-                                    <input type="text" 
-                                    onChange= {(e) => setValue(e.target.value)} 
-                                    className="form-control" 
-                                    placeholder="Enter City Name" 
-                                    name="cityName" 
-                                    value={userValue}/>
+                                    <input type="text"
+                                        onChange={(e) => setValue(e.target.value)}
+                                        className="form-control"
+                                        placeholder="Enter City Name"
+                                        name="cityName"
+                                        value={userValue} />
                                 </div>
                                 <div className="col-2 frm-dsn wef">
-                                    <button type="submit" 
-                                    className="btn btn-primary">
+                                    <button type="submit"
+                                        className="btn btn-primary">
                                         <i className="bi bi-search"></i>
                                     </button>
                                 </div>
                             </div>
                             <div id="rand-cities" className="row">
-                                {Cities.map((city) => <button type="submit" 
-                                onClick= {(e) => setValue(e.target.value)}
-                                className="btn btn-outline-primary btn-lg"  
-                                value={city} name="cityNameBtn">{city}</button>)}
+                                {Cities.map((city) => <button type="submit"
+                                    onClick={(e) => setValue(e.target.value)}
+                                    className="btn btn-outline-primary btn-lg"
+                                    value={city} name="cityNameBtn">{city}</button>)}
                             </div>
                         </form>
                     </div>
