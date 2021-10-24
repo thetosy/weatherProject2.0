@@ -27,6 +27,7 @@ function Form() {
     const [weatherDescription, setWeatherDescription] = useState();
     const [temperature, setWeatherTemp] = useState();
     const [userValue, setValue] = useState();
+    const [codeValue, setCodeValue] = useState();
 
     useEffect(() => {
         axios.get("https://api.openweathermap.org/data/2.5/weather", {
@@ -38,6 +39,7 @@ function Form() {
         }).then((response) => {
             const formatTemp = Math.round(response.data.main.temp);
             setWeatherTemp(formatTemp);
+            setCodeValue(response.data.weather[0].id)
             setCityName(response.data.name);
             setWeatherDescription(response.data.weather[0].main);
             const formatHumidity = response.data.main.humidity + "%";
@@ -62,6 +64,7 @@ function Form() {
         }).then((response) => {
             const formatTemp = Math.round(response.data.main.temp);
             setWeatherTemp(formatTemp);
+            setCodeValue(response.data.weather[0].id)
             setCityName(response.data.name);
             setWeatherDescription(response.data.weather[0].main);
             const formatHumidity = response.data.main.humidity + "%";
@@ -87,6 +90,7 @@ function Form() {
                     humidity={humidity}
                     description={weatherDescription}
                     temp={temperature}
+                    codes={codeValue}
                 />
                 <div id="box" className="col-6 weather-search">
                     <div className="container">

@@ -29,6 +29,23 @@ function Information(props) {
     }, 1000);
   }, []);
 
+  function WeatherCode(codes) {
+    if (codes >= 200 && codes <= 232) {
+      return cloudyRainHeavy;
+    } else if (codes >= 300 && codes <= 531) {
+      return cloudyRain;
+    } else if (codes >= 600 && codes <= 622) {
+      return snowIcon;
+    } else if (codes >= 700 && codes <= 781) {
+      return mistIcon;
+    } else if (codes == 800) {
+      return sunnyIcon;
+    } else {
+      return cloudyIcon;
+    }
+
+  }
+
 
 
   return (
@@ -41,7 +58,7 @@ function Information(props) {
             <h1 id="temp-indicator">{props.temp}</h1>
           </span>
           <span id="temp-indicator-img" className="col-6 we">
-            <img src={sunnyIcon} alt='cloudy-icon' />
+            <img src={WeatherCode(props.codes)} alt='cloudy-icon' />
           </span>
         </div>
 
