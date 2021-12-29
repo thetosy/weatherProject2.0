@@ -1,18 +1,71 @@
-# Getting Started with Create React App
+<p align="center">
+    <img src="images/logo.png" alt="Logo">
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About the Project
 
-## Available Scripts
+[![project-in-action][display.gif]](images/display.gif)
 
-In the project directory, you can run:
+This is a simple web project that allows the user to get the current weather details from any city
 
-### `yarn start`
 
-Runs the app in the development mode.\
+### Built With
+* [React.js](https://reactjs.org/)
+* [Bootstrap](https://getbootstrap.com)
+* [JQuery](https://jquery.com)
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+## Getting Started
+<!-- Go to Add link if you can upload to heroku  --> 
+To get a local copy, follow the steps below
+
+### Prerequisites
+
+* Register for a free API ID at [openWeatherMAP](https://openweathermap.org)
+* To use this program you need to have [node](https://nodejs.org/) and [yarn](https://yarnpkg.com/getting-started/install)     installed
+
+### Installation
+
+1. Clone the repo 
+
+```sh
+git clone https://github.com/thetosy/weatherProject2.0.git
+```
+
+2. Install the packages
+```sh
+yarn install
+```
+
+3. Create a .env file in the project directory and enter your API ID
+```sh
+REACT_APP_ID=YOUR_API_ID
+```
+
+or 
+
+Enter your API ID in `form.jsx` replacing 
+```js
+const ID = YOUR_API_ID;
+```
+
+4. In the project directory, you can run
+
+```sh
+yarn start
+```
+This runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Other Available Scripts
 
 ### `yarn test`
 
@@ -39,32 +92,19 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<!-- CONTACT -->
+## Contact
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<!-- Your Name - [Portfolio-Link](https://twitter.com/twitter_handle) - email@email_client.com -->
 
-### Code Splitting
+<!-- Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name) -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-### Analyzing the Bundle Size
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* []()
 
-### Making a Progressive Web App
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
