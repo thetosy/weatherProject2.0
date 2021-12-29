@@ -1,10 +1,10 @@
 <p align="center">
-    <img src="images/logo.png" alt="Logo">
+    <img src="public/images/logo.png" alt="Logo">
 </p>
 
 ## About the Project
 
-[![project-in-action][display.gif]](images/display.gif)
+[![project-in-action][display.gif]](public/images/display.gif)
 
 This is a simple web project that allows the user to get the current weather details from any city
 
