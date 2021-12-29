@@ -19,8 +19,8 @@ This is a simple web project that allows the user to get the current weather det
 
 <!-- GETTING STARTED -->
 ## Getting Started
-[Click](https://weather-lookup1.herokuapp.com) to view a live demo of the app
-To get a local copy, follow the steps below
+[Click](https://weather-lookup1.herokuapp.com) to view a live demo of the app.  To get a local copy, follow the steps below
+
 
 ### Prerequisites
 
